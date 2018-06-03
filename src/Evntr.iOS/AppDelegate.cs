@@ -14,7 +14,11 @@ namespace Evntr.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			LoadApplication(new Core.App());
+#if ENABLE_TEST_CLOUD
+            Xamarin.Calabash.Start();
+#endif
+
+            LoadApplication(new Core.App());
 
 			return base.FinishedLaunching(app, options);
 		}
