@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>Evntr</string>
 	<key>CFBundleIdentifier</key>
-	<string>br.com.radek.Evntr</string>
+	<string>br.com.akamud.eventrapp</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
