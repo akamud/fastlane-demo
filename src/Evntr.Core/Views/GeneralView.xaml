@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Evntr.Core.Controls"
+    x:Class="Evntr.Core.Views.GeneralView">
+    <StackLayout BackgroundColor="#352584"
+                 Spacing="0">
+        <Image Source="{Binding Event.LogoUrl}"
+               HeightRequest="120"/>
+        <Label Text="{Binding Event.Name}"
+               BackgroundColor="#352584"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold"
+               Margin="0,-20,0,10"/>
+        <Label Text="Palestrantes" 
+               BackgroundColor="#ED3941"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="#EFEFEF"
+               HeightRequest="40"/>
+        <ListView
+            ItemsSource="{Binding Speakers}"
+            BackgroundColor="#EFEFEF"
+            SeparatorColor="#CDCDCD"
+            HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <local:SpeakerView Name="{Binding Name}"
+                                           AvatarUrl="{Binding AvatarUrl}"
+                                           MiniBio="{Binding MiniBio}"/>
+                    </ViewCell>
+                </DataTemplate>            
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
