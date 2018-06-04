@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane ios prerelease
 ```
 Verifica screenshots
+### ios adhoc
+```
+fastlane ios adhoc
+```
+
 
 ----
 

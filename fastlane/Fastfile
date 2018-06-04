@@ -30,4 +30,17 @@ platform :ios do
         path: './fastlane/screenshots'
     )
   end
+
+  lane :adhoc do
+    register_devices(
+      devices_file: "./fastlane/devices.txt"
+    )
+
+    match(
+      git_url: 'https://akamud.visualstudio.com/EventrCertificates/_git/EventrCertificates',
+      type: 'adhoc',
+      git_user_email: 'mahmoud.ali@outlook.com',
+      force_for_new_devices: true
+    )
+  end
 end
